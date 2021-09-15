@@ -8,10 +8,8 @@ public class Assignment : ProcessingLite.GP21
     public float y1;
     public float x2;
     public float y2;
-    //float spaceBetweenLines = 0.2f;
     
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,27 +17,13 @@ public class Assignment : ProcessingLite.GP21
     }
 
 
+
+
     // Update is called once per frame
     void Update()
     {
 
-        //Background(50, 166, 240);
-        //Rect(1, 1, 3, 3);
-
-        //for (int i = 0; i < Height / spaceBetweenLines; i++)
-        //{
-        //    //Increase y-cord each time loop run
-        //    float y = i * spaceBetweenLines;
-
-        //    //Draw a line from left side of screen to the right
-        //    Line(0, y, Width, y);
-        //    Line(0, (y + Time.time) % Height, Width, (y + Time.time) % Height);
-        //}
-
-
-        //Stroke(128, 128, 128, 64);
-
-        //StrokeWeight(0.5f);
+        
 
         Background(Color.black);
         LetterA();
@@ -47,10 +31,11 @@ public class Assignment : ProcessingLite.GP21
         LetterI();
         LetterN();
         LetterA();
+        LetterS();
         Draw();
         Line(x1, y1, x2, y2);
         //Ellipse(x1, y1, x2, y2);
-        StrokeWeight(2);
+        
 
     }
 
@@ -58,12 +43,15 @@ public class Assignment : ProcessingLite.GP21
     {
         Stroke(107, 142, 45);
         StrokeWeight(2.5f);
-        Line(0, 0.15f, 15.46f, 0.15f);
+        Line(0.15f, 0.15f, 21, 0.15f);
     }
+
+    
 
     public void LetterA()
     {
         Stroke(255, 255, 255);
+        StrokeWeight(2);
         Line(1, 5, 0.25f, 1);
         Line(4, 1, 3, 5);
         Line(3, 5, 1, 5);
@@ -76,24 +64,46 @@ public class Assignment : ProcessingLite.GP21
     }
 
     public void LetterL()
+
     {
+        Stroke(255, 255, 255);
+        StrokeWeight(2);
         Line(5.16f, 1.01f, 5.15f, 5.04f);
         Line(5.15f, 1.04f, 8, 1.05f);
     }
 
     public void LetterI()
     {
-        Line(9, 1, 9, 4);
-        Line(9, 5, 9, 5.05f);
+        Stroke(169, 169, 169);
+        StrokeWeight(8);
+        Line(9, 5.62f, 9, 0.27f);
+        
+        //Line(9, 5, 9, 5.05f);
     }
 
     public void LetterN()
     {
+        Stroke(255, 255, 255);
+        StrokeWeight(2);
         Line(10, 4, 10, 1);
         Line(11, 1, 10, 4);
         Line(11, 4, 11, 1);
 
     }
 
+    public void LetterS()
+    {
+        Stroke(218, 165, 32);
+        StrokeWeight(7);
+        Line(6.36f, 5.60f, 11.57f, 5.60f);
+        Line(6.48f, 4.29f, 6.49f, 5.25f);
+        Line(11.4f, 4.29f, 11.4f, 5.25f);
+        Line(7.71f, 7.95f, 10.22f, 7.96f);
+
+        Stroke(40, 79, 79);
+        Line(9, 7.65f, 9, 5.92f);
+    }    
+    
+    
 
 }
