@@ -8,6 +8,10 @@ public class Assignment : ProcessingLite.GP21
     public float y1;
     public float x2;
     public float y2;
+    //float spaceBetweenLines = 0.2f;
+    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,22 +19,51 @@ public class Assignment : ProcessingLite.GP21
     }
 
 
-   // Update is called once per frame
+    // Update is called once per frame
     void Update()
-    {       
+    {
+
+        //Background(50, 166, 240);
+        //Rect(1, 1, 3, 3);
+
+        //for (int i = 0; i < Height / spaceBetweenLines; i++)
+        //{
+        //    //Increase y-cord each time loop run
+        //    float y = i * spaceBetweenLines;
+
+        //    //Draw a line from left side of screen to the right
+        //    Line(0, y, Width, y);
+        //    Line(0, (y + Time.time) % Height, Width, (y + Time.time) % Height);
+        //}
+
+
+        //Stroke(128, 128, 128, 64);
+
+        //StrokeWeight(0.5f);
+
         Background(Color.black);
         LetterA();
         LetterL();
         LetterI();
         LetterN();
         LetterA();
+        Draw();
         Line(x1, y1, x2, y2);
-      
-        
-     
+        //Ellipse(x1, y1, x2, y2);
+        StrokeWeight(2);
+
     }
- public void LetterA()
+
+    public void Draw()
     {
+        Stroke(107, 142, 45);
+        StrokeWeight(2.5f);
+        Line(0, 0.15f, 15.46f, 0.15f);
+    }
+
+    public void LetterA()
+    {
+        Stroke(255, 255, 255);
         Line(1, 5, 0.25f, 1);
         Line(4, 1, 3, 5);
         Line(3, 5, 1, 5);
@@ -62,5 +95,5 @@ public class Assignment : ProcessingLite.GP21
 
     }
 
-    
+
 }
