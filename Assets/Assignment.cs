@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,10 @@ public class Assignment : ProcessingLite.GP21
     public float y1;
     public float x2;
     public float y2;
-    
-    
+    float lineSpacing = 1.5f;
+    public int i;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +25,6 @@ public class Assignment : ProcessingLite.GP21
     // Update is called once per frame
     void Update()
     {
-
-        
-
         Background(Color.black);
         LetterA();
         LetterL();
@@ -34,10 +34,16 @@ public class Assignment : ProcessingLite.GP21
         LetterS();
         Draw();
         Line(x1, y1, x2, y2);
+        HorizontalLine();
+
         //Ellipse(x1, y1, x2, y2);
         
 
     }
+        
+
+
+
 
     public void Draw()
     {
@@ -104,6 +110,23 @@ public class Assignment : ProcessingLite.GP21
         Line(9, 7.65f, 9, 5.92f);
     }    
     
-    
+    public void HorizontalLine()
+    {
+        //Line(20.21f, 1.1f, 16.41f, 0.3f);
+
+        for (int i = 0; i <= 10; i++)
+            Line(i, 0, 10, i);
+
+        if (i % 2 == 0)
+        {
+            Stroke(140, 23, 180);
+        }    
+                
+        else
+        {
+            Stroke(255);
+        }
+
+    }    
 
 }

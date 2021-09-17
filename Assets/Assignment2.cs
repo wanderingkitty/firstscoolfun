@@ -9,6 +9,8 @@ public class Assignment2 : ProcessingLite.GP21
 
     void Start()
     {
+       
+        
 
     }
 
@@ -18,20 +20,33 @@ public class Assignment2 : ProcessingLite.GP21
         Background(50, 166, 240);
 
         //Draw our art, or in this case a rectangle
-        Rect(1, 1, 3, 3);
+        //Rect(1, 1, 3, 3);
 
         Stroke(128, 128, 128, 64);
         StrokeWeight(0.5f);
 
         //Draw our scan lines
-        for (int i = 0; i < Height / spaceBetweenLines; i++)
-        {
-            //Increase y-cord each time loop run
-            float y = i * spaceBetweenLines;
+        //for (int i = 0; i < Height / spaceBetweenLines; i++)
+            
 
-            //Draw a line from left side of screen to the right
-            Line(0, y, Width, y);
+        //{
+        //    //Increase y-cord each time loop run
+        //    float y = i * spaceBetweenLines;
+            
+
+        //    //Draw a line from left side of screen to the right
+        //    Line(0, (y + Time.time) % Height, Width, (y + Time.time) % Height);
+            
+        //}
+
+        for (int i = 5; i < Width / spaceBetweenLines; i++)
+        {
+            float x = i * spaceBetweenLines;
+            Line(0, (x + Time.time) % Width, Width, (x + Time.time) % Height);
         }
+
+
+
     }
 
 

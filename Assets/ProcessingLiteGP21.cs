@@ -12,15 +12,15 @@ namespace ProcessingLite
 	/// </summary>
 	public class GP21 : MonoBehaviour
 	{
-		public const  int   MAXNumberOfObjects = 500;
-		private const float PointSize          = 0.02f;
+		public const int MAXNumberOfObjects = 500;
+		private const float PointSize = 0.02f;
 
 		public static float PStrokeWeight = 1;           //Processing
-		public static Color PStroke       = Color.white; //Processing
-		public static Color PFill         = Color.black; //Processing
+		public static Color PStroke = Color.white; //Processing
+		public static Color PFill = Color.black; //Processing
 
 		internal static bool DrawStroke = true;
-		internal static bool DrawFill   = true;
+		internal static bool DrawFill = true;
 
 		//Private variables
 		private PLine _pLine;
@@ -155,7 +155,7 @@ namespace ProcessingLite
 		{
 			_pShape ??= new PShape();
 			_pShape.ShapeKeys = new List<Vector2>(
-				new[] {pos1, pos2, pos3, pos4}
+				new[] { pos1, pos2, pos3, pos4 }
 				);
 			_pShape.ShapeMode = PShapeMode.Default;
 			_pShape.Shape(true, DrawFill);
@@ -193,7 +193,7 @@ namespace ProcessingLite
 		{
 			_pShape ??= new PShape();
 			_pShape.ShapeKeys = new List<Vector2>(
-				new[] {pos1, pos2, pos3}
+				new[] { pos1, pos2, pos3 }
 			);
 			_pShape.ShapeMode = PShapeMode.Default;
 			_pShape.Shape(true, DrawFill);
@@ -426,8 +426,8 @@ namespace ProcessingLite
 	{
 		public delegate void LateReset();
 
-		public const    float ZOffset    = -0.001f; //offset between objects in depth.
-		internal static int   Background = 2;
+		public const float ZOffset = -0.001f; //offset between objects in depth.
+		internal static int Background = 2;
 		internal static float DrawZOffset; //current offset
 
 		private static Transform _holder;
@@ -488,7 +488,7 @@ namespace ProcessingLite
 		}
 	}
 
-	#if UNITY_EDITOR
+#if UNITY_EDITOR
 	[CustomEditor(typeof(ProcessingLiteGP21))]
 	public class ProcessingLiteEditor : Editor
 	{
@@ -499,7 +499,7 @@ namespace ProcessingLite
 			Destroy(this);
 		}
 	}
-	#endif
+#endif
 
 	public interface IObjectPooling
 	{
@@ -760,7 +760,7 @@ namespace ProcessingLite
 
 			//apply size and position
 			Transform transform = newSpriteRenderer.transform;
-			transform.position   = new Vector3(x, y, ProcessingLiteGP21.DrawZOffset);
+			transform.position = new Vector3(x, y, ProcessingLiteGP21.DrawZOffset);
 			transform.localScale = new Vector3(PointSize, PointSize, 1f);
 
 			//Increment to next line in list
