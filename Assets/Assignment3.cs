@@ -9,7 +9,7 @@ public class Assignment3 : ProcessingLite.GP21
     public Vector2 circlePosition;
     public float diameter = 2;
     public Vector2 direction;
-    int colorValue = 0;
+    
 
     
     // Start is called before the first frame update

@@ -9,8 +9,9 @@ public class Assignment : ProcessingLite.GP21
     public float y1;
     public float x2;
     public float y2;
-    float lineSpacing = 1.5f;
+    public float spaceBetweenLines = 0.2f;
     public int i;
+    
 
 
     // Start is called before the first frame update
@@ -32,27 +33,23 @@ public class Assignment : ProcessingLite.GP21
         LetterN();
         LetterA();
         LetterS();
-        Draw();
-        Line(x1, y1, x2, y2);
-        HorizontalLine();
+        Ground();
 
+        //HorizontalLine();
         //Ellipse(x1, y1, x2, y2);
-        
+        //Rect(x1, y1, x2, y2);
+        Line(x1, y1, x2, y2);
+        Fire();
+        Woods();
 
     }
-        
 
-
-
-
-    public void Draw()
+    public void Ground()
     {
-        Stroke(107, 142, 45);
-        StrokeWeight(2.5f);
+        Stroke(0, 100, 0);
+        StrokeWeight(4);
         Line(0.15f, 0.15f, 21, 0.15f);
     }
-
-    
 
     public void LetterA()
     {
@@ -68,7 +65,6 @@ public class Assignment : ProcessingLite.GP21
         Line(14.02f, 4.3f, 14.9f, 1);
         Line(12.38f, 3, 14.4f, 3);
     }
-
     public void LetterL()
 
     {
@@ -109,24 +105,107 @@ public class Assignment : ProcessingLite.GP21
         Stroke(40, 79, 79);
         Line(9, 7.65f, 9, 5.92f);
     }    
-    
-    public void HorizontalLine()
-    {
-        //Line(20.21f, 1.1f, 16.41f, 0.3f);
 
-        for (int i = 0; i <= 10; i++)
-            Line(i, 0, 10, i);
 
-        if (i % 2 == 0)
-        {
-            Stroke(140, 23, 180);
-        }    
+
+    //public void HorizontalLine()
+    //{
+    //    //Line(20.21f, 1.1f, 16.41f, 0.3f);
+
+    //    for (int i = 0; i <= 10; i++)
+    //        Line(i, 0, 10, i);
+
+    //    if (i % 2 == 0)
+    //    {
+    //        Stroke(140, 23, 180);
+    //    }    
                 
-        else
-        {
-            Stroke(255);
-        }
+    //    else
+    //    {
+    //        Stroke(255);
+    //    }
 
-    }    
+    //}    
+
+    public void Fire()
+    {
+
+
+        float adjustment = Mathf.Sin(Time.time % Mathf.PI * 2 - Mathf.PI); /**Time.deltaTime * 4*/
+
+        Stroke(255, 69, 0);
+        StrokeWeight(13);
+        Line(18 + adjustment, 4.1f, 18.18f, 1.3f);
+
+
+
+        Stroke(255, 0, 0);
+        StrokeWeight(5);
+        Line(18, 4.5f, 18.18f, 1.3f);
+
+        Stroke(255, 69, 0);
+        StrokeWeight(13);
+        Line(19.3f, 3.2f, 18.55f, 1);
+
+        Stroke(255, 69, 0);
+        StrokeWeight(6);
+        Line(20, 2, 19.0f, 1.3f);
+
+        Stroke(255, 0, 0);
+        StrokeWeight(3);
+        Line(20.3f, 2.2f, 18.32f, 0.7f);
+
+
+        Stroke(255, 0, 0);
+        StrokeWeight(5);
+        Line(19.37f, 3.5f, 18.55f, 1.3f);
+
+        
+
+
+        //Stroke(255, 69, 0);
+        //StrokeWeight(3);
+        //Rect(20.02f, 1.4f, 19.25f, 1.84f);
+
+        //Stroke(255, 69, 0);
+        //StrokeWeight(3);
+        //Rect(18.3f, 3.1f, 18.88f, 1);
+
+        //Rect(17.50f, 3.75f, 18.01f, 1.5f);
+
+    }
+
+    public void Woods()
+    {
+        Stroke(139, 69, 19);
+        StrokeWeight(9);
+        Line(20.67f, 1.2f, 16.6f, 0.2f);
+        Stroke(139, 69, 19);
+        StrokeWeight(9);
+        Line(20.35f, 0.25f, 16.13f, 2.1f);
+
+        Stroke(160, 82, 45);
+        StrokeWeight(4);
+        Line(16.25f, 2.2f, 20.9f, -0.4f);
+
+        Stroke(160, 82, 45);
+        StrokeWeight(4);
+        Line(20.57f, 0.9f, 16.86f, 0.4f);
+    }
 
 }
+
+
+        
+
+
+
+
+    
+
+
+
+    
+
+     
+
