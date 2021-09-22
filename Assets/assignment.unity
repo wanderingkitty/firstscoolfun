@@ -247,14 +247,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232424724}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed9e67da35cfcd64ba16ce2e0614ef5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   circlePosition: {x: 0, y: 0}
-  diameter: 0.2
-  direction: {x: 0, y: 0}
 --- !u!114 &232424731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,8 +260,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232424724}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 491294fac97113f4893a00f5c7868fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}

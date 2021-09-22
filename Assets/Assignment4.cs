@@ -49,11 +49,11 @@ public class Assignment4 : ProcessingLite.GP21
         Circle(position.x, position.y, diameter);
 
 
-
         //Circle no acc.
         position2 += new Vector2(x, y);
         Fill(221, 160, 221);
         //Circle(position2.x, position.y, diameter);
+
 
 
 
