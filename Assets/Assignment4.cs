@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class Assignment4 : ProcessingLite.GP21
 {
 
@@ -24,6 +27,8 @@ public class Assignment4 : ProcessingLite.GP21
     void Update()
     {
         Background(50, 166, 250);
+
+        
 
         //Player Input
         float x = Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime;
@@ -59,4 +64,6 @@ public class Assignment4 : ProcessingLite.GP21
 
 
     }
+
 }
+
